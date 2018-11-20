@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <meta charset="utf-8"/>
+    <meta name="description" content="StopWatch"/>
+    <title>Stop Smoking</title>
+    <link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+<body>
+    <script type="text/javascript" src="./js/jQuery/jquery-1-12-0-min.js"></script>
+    
+    <script src="./js/timerPageControl.js"></script>
+    <input type="hidden" value="1" name="pageIs" id="pageIs"/>
+	<div class="ui-page ui-page-active" id="pageinfo1">     
+        <header class="ui-header ui-has-more ui-grid-col-2">
+        	stop smoking
+        </header> 
+        <section class="ui-content scrollable" id="section1"> 
+			<span>Set stop smoking time,<br>
+			wether calculating per box or per bin, per week or per day!<br>
+			Get results: health, time, money.
+			</span>
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" id="footer1">
+            <button type="button" class="ui-btn btn-activ footerbuttons" id="footer1-back">ending</button>            
+            <button type="button" class="ui-btn footerbuttons" id="footer1-forward">forward</button>        
+        </footer>
+        
+    </div>
+ 
+     <div class="ui-page" id="pagedate">
+     <!-- <div class="ui-page" id="timer-page"> -->
+        <header class="ui-header ui-has-more ui-grid-col-2">
+        	Stop Smoking Date
+        <!--
+            <button type="button" class="ui-btn btn-active" id="timer-navi-stopwatch">StopWatch</button>
+            <button type="button" class="ui-btn" id="timer-navi-timer">Timer</button>            
+            -->
+        </header> 
+        <section class="ui-content scrollable" id="timer-content">
+            <div id="timer-labels">
+                <div class="timer-label">day</div><div>month</div><div>year</div>
+            </div>
+            <div class="flip-container" id="flip-container">
+                <div data-index="0" class="big flip active"><div class="label flips" id="a">00</div></div>
+                <div data-index="1" class="big flip"><div class="label flips">00</div></div>
+                <div data-index="2" class="big flip"><div class="label flips">00</div></div>
+            </div>
+
+            <table id="timer-keyboard" class="timer-keyboards">
+                <tr>
+                    <td class="key"><button type="button" data-value="1" class="ui-btn">1</button></td>
+                    <td class="key"><button type="button" data-value="2" class="ui-btn">2</button></td>
+                    <td class="key"><button type="button" data-value="3" class="ui-btn">3</button></td>
+                </tr>
+                <tr>
+                    <td class="key"><button type="button" data-value="4" class="ui-btn">4</button></td>
+                    <td class="key"><button type="button" data-value="5" class="ui-btn">5</button></td>
+                    <td class="key"><button type="button" data-value="6" class="ui-btn">6</button></td>
+                </tr>
+                <tr>
+                    <td class="key"><button type="button" data-value="7" class="ui-btn">7</button></td>
+                    <td class="key"><button type="button" data-value="8" class="ui-btn">8</button></td>
+                    <td class="key"><button type="button" data-value="9" class="ui-btn">9</button></td>
+                </tr>
+                <tr>
+                    <td class="key"></td>
+                    <td class="key"><button type="button" data-value="0" class="ui-btn">0</button></td>
+                    <td class="key"><button type="button" data-value="del" class="ui-btn">&lt;</button></td>
+                    <!-- <td class="key"><button type="button" data-value="del" class="ui-btn del">&nbsp;</button></td> -->
+                </tr>
+            </table>
+        </section>
+         
+        <footer class="ui-footer ui-has-more ui-grid-col-2" id="timer-footer">
+        <!--
+            <button type="button" class="ui-btn timer-btn timer-ready" id="timer-start-btn">START</button>
+            <button type="button" class="ui-btn timer-btn timer-running hidden" id="timer-stop-btn">STOP</button>
+            <button type="button" class="ui-btn timer-btn timer-running hidden footer-button-last" id="timer-reset1-btn">RESET</button>
+            <button type="button" class="ui-btn timer-btn timer-paused hidden" id="timer-restart-btn">RESTART</button>
+            <button type="button" class="ui-btn timer-btn timer-paused hidden footer-button-last" id="timer-reset2-btn">RESET</button>
+        -->     
+            <button type="button" class="ui-btn btn-active footerbuttons" id="footer2-back">back</button>
+            <button type="button" class="ui-btn footerbuttons" id="footer2-forward">forward</button>
+        
+        </footer>
+        
+    </div>
+     <div class="ui-page">     
+        <header class="ui-header ui-has-more ui-grid-col-2">
+        Stop Smoking Time
+        </header> 
+        <section class="ui-content scrollable radiotext" id="section3">
+            <div id="timer-labels">
+                <div class="timer-label">hour</div><div>minute</div><div>meridiem</div>
+            </div><!--     	
+        	<div class="flip-container">
+                <div data-index="0" class="big flip active"><div class="label">00</div></div>
+                <div data-index="1" class="big flip"><div class="label">00</div></div>
+                <div data-index="2" class="big flip"><div class="label">pm</div></div>
+            </div>-->
+
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" >
+            <button type="button" class="ui-btn btn-active footerbuttons">back</button>            
+            <button type="button" class="ui-btn footerbuttons">forward</button>        
+        </footer>        
+    </div>
+     <div class="ui-page" id="pagepackagetype">     
+        <header class="ui-header ui-has-more ui-grid-col-2">
+        	units declaration
+        </header> 
+        <section class="ui-content scrollable radiotext" id="section4">        	
+        		<input type="radio" name="packagingtype" value="box" checked id="packagingtypebox" class="radio2x2">box  cigarettes<br>        		
+				<input type="radio" name="packagingtype" value="tabako" id="packagingtypetabako" class="radio2x2">bin tabako + ..<br>
+        	    <br>
+				<input type="radio" name="period" value="perDay" checked id="periodperDay" class="radio2x2">per day<br>
+				<input type="radio" name="period" value="perWeek" id="periodperWeek" class="radio2x2">per week<br>
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" >
+            <button type="button" class="ui-btn btn-active footerbuttons">back</button>            
+            <button type="button" class="ui-btn footerbuttons">forward</button>        
+        </footer>        
+    </div>
+    <div class="ui-page singleflip" id="pagepackageprice">     
+        <header class="ui-header ui-has-more ui-grid-col-2" id="pricePerPackagetye">
+        	
+        </header> 
+        <section class="ui-content scrollable radiotext singleflip" id="section5">
+        	<div class="flip-container" style="margin-left: 10px">
+                <div data-index="0" class="larger flip active"><div class="label flips">0000.00</div></div>                                
+            </div>        	
+
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" >
+            <button type="button" class="ui-btn btn-active footerbuttons">back</button>            
+            <button type="button" class="ui-btn footerbuttons">forward</button>        
+        </footer>        
+    </div>
+    <div class="ui-page singleflip" id="pagepackageprice">     
+        <header class="ui-header ui-has-more ui-grid-col-2" id="binsPerTime">
+        	
+        </header> 
+        <section class="ui-content scrollable radiotext" id="section6">
+        	<div class="flip-container" style="margin-left: 10px">
+                <div data-index="0" class="larger flip active"><div class="label flips">00.00</div></div>                                
+            </div>        	
+            
+
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" >
+            <button type="button" class="ui-btn btn-active footerbuttons">back</button>            
+            <button type="button" class="ui-btn footerbuttons">forward</button>        
+        </footer>        
+    </div>
+	<div class="ui-page singleflip" id="AmountCigarettesPerTime">     
+        <header class="ui-header ui-has-more ui-grid-col-2" id="CigarettesPerPackaging">
+        	
+        </header> 
+        <section class="ui-content scrollable radiotext" id="section7">
+        	<div class="flip-container singleflip">
+               	<div data-index="0" class="big flip active"><div class="label flips" id="flipCigarettesPerPackaging">00</div></div>
+               	<!-- style="height: 73px;" -->                           
+            </div>
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" >
+            <button type="button" class="ui-btn btn-active footerbuttons">back</button>            
+            <button type="button" class="ui-btn footerbuttons">forward</button>        
+        </footer>        
+    </div>
+	<div class="ui-page singleflip" id="SmokingTime">     
+        <header class="ui-header ui-has-more ui-grid-col-2" id="SmokingTimeHeader">
+        	smoking minutes
+        </header> 
+        <section class="ui-content scrollable radiotext" id="section8">
+        	<div class="flip-container singleflip">
+               	<div data-index="0" class="big flip active"><div class="label flips" id="flipSmokingTime">01</div></div>
+               	<!-- style="height: 73px;" -->                           
+            </div>        	
+
+
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" >
+            <button type="button" class="ui-btn btn-active footerbuttons">back</button>            
+            <button type="button" class="ui-btn footerbuttons">forward</button>        
+        </footer>        
+    </div>
+	<div class="ui-page singleflip" id="SmokersInCountry">     
+        <header class="ui-header ui-has-more ui-grid-col-2" id="SmokersInCountryHeader">
+        	smokers in country 
+        </header> 
+        <section class="ui-content scrollable radiotext" id="section9">
+        	<div class="flip-container" style="margin-left: 10px">
+               	<div data-index="0" class="larger flip active"><div class="label flips">50%</div></div>               	
+            </div>
+
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" >
+            <button type="button" class="ui-btn btn-active footerbuttons">back</button>            
+            <button type="button" class="ui-btn footerbuttons">forward</button>        
+        </footer>        
+    </div>
+	<div class="ui-page singleflip" id="Solutions">     
+        <header class="ui-header ui-has-more ui-grid-col-2" id="SolutionsHeader">Health & Success</header> 
+        <section class="ui-content scrollable radiotext" id="section10">
+        	<span id="health"></span>
+        	<!-- 
+        	100% Kohlenmonoxyd<br>
+			100% Geschmack Geruch<br>
+			100% Krebsrisiko<br>
+			100% Lunge regeneriert<br>
+			100% Herzinfarktrisiko<br>
+			wie bei Nichtraucher
+			 -->
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" >
+            <button type="button" class="ui-btn btn-active footerbuttons">back</button>            
+            <button type="button" class="ui-btn footerbuttons">forward</button>        
+        </footer>        
+    </div>
+	<div class="ui-page singleflip" id="Solutions2">     
+        <header class="ui-header ui-has-more ui-grid-col-2" id="Solutions2Header">Money is time.</header> 
+        <section class="ui-content scrollable radiotext" id="section11">
+        	<span id="moneysaved"></span><br>
+        	<span id="dauer"></span><br>
+        	<span id="timesaved"></span>
+        	
+        	
+         
+              	
+        </section>
+        <footer class="ui-footer ui-has-more ui-grid-col-2" >
+            <button type="button" class="ui-btn btn-active footerbuttons">back</button>            
+            <button type="button" class="ui-btn footerbuttons">forward</button>        
+        </footer>        
+    </div>
+    <!--
+    <div class="ui-page" id="timer-up-page">
+        <div id="timer-up-total-time">00:00:00</div>
+        <button type="button" data-value="9" class="ui-btn" id="timer-up-stop-btn">OK</button>
+    </div>
+ -->
+    <script src="./lib/tau/wearable/js/tau.js"></script>
+    <script src="./js/core/core.js" data-main="./js/app.js"></script>
+    
+	<script src="./js/lowBatteryCheck.js"></script>
+</body>
+</html>

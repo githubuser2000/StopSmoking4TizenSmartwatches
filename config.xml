@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://alexkern.de/stop-smoking" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="r9VmLtTEc2.Versuch5" package="r9VmLtTEc2" required_version="2.2"/>
+    <author email="ak@alexkern.de">Alexander Kern</author>
+    <content src="index.html"/>
+    <icon src="icon4i.png" height="184" width="184"/>
+    <license href="http://services.alexkern.de/licence.html">proprietary licence</license>
+    <name>Stop Smoking</name>
+    <tizen:privilege name="http://tizen.org/privilege/power"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.info"/>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/filesystem.write"/>
+    <tizen:setting background-support="enable" encryption="disable" hwkey-event="enable"/>
+	 
+</widget>
